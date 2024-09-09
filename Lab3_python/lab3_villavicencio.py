@@ -8,12 +8,10 @@ print("---------------- Example 1: Control Flow -----------------")
 labs = int(input("Enter Lab's Grade: "))
 exams = int(input("Enter Exam's Grade: "))
 
-# Calculate the final grade based on lab and exam grades
-if 0 <= labs <= 100 and 0 <= exams <= 100:  # Check for valid grades
+if 0 <= labs <= 100 and 0 <= exams <= 100:  
     finalGrade = (labs + exams) / 2
     gpa = ''
     
-    # Determine the GPA based on the final grade
     if 100 >= finalGrade >= 90:
         gpa = 'A'
     elif 90 > finalGrade >= 80:
@@ -35,3 +33,40 @@ else:
     gpa = 'UNDEFINED'
 
 print(f"Your final grade for the class is {gpa}")
+
+print("----------------- Example 2: Loops --------------------")
+secret = 8
+userGuess = int(input("Guess a number between  1 and 10: "))
+while not(secret == userGuess):
+    userGuess = int(input("Wrong guess. Guess again: "))
+
+print(f"Congrats! {userGuess} is the right number!!!")
+
+print("----------------- Example 3: Loops, Break statement --------------------")
+balance = 1000
+withdraw = 0
+deposit = 0
+
+while True:
+    userinput = input("Do you want to withdraw, press w, or deposit ,press d? ")
+    if userinput ==  'w' or userinput ==  'W':
+        w_amount = int(input('How much do you wat to withdraw? '))
+        if w_amount > balance:
+            print("Insufficient funds!!! \n Can't withdraw more than {balance} ")
+        else:
+            balance -= w_amount
+
+    elif userinput == 'd' or userinput == 'D':
+            d_amount = int(input('How much do yu want to deposit? '))
+            balance += d_amount
+            print(f"Your new balance is {balance}")
+    else:
+            print("Invalid Selection")
+
+    choice = input("Would you like to make another transaction? (y,n)")
+    if not(choice == 'y' or choice == 'y'):
+        break
+
+print("Thank you for banking with us!")
+
+
