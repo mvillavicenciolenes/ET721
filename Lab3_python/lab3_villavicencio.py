@@ -80,5 +80,5 @@ colors = ['magenta', 'babyblue', 'olive']
 
 for c in colors:
     print(f"color = {c}")
-    
 
+print("-----------------------------------------------------------------------")
