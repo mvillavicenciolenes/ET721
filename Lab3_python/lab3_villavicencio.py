@@ -69,4 +69,16 @@ while True:
 
 print("Thank you for banking with us!")
 
+print("----------------- Example 4: For Loops as a counter --------------------")
+
+for n in range(-5,3,2):
+    print(f"counting = {n}")
+
+print("----------------- Example 5: for loop in a list --------------------")
+
+colors = ['magenta', 'babyblue', 'olive']
+
+for c in colors:
+    print(f"color = {c}")
+    
 
